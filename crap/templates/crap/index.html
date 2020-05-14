@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Covid Shitshow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <style>
+
+        #main-text {
+            font-family: 'Varela Round', sans-serif;
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.80);
+        }
+
+        body {
+            background-color: #5E5694;
+        }
+
+        footer {
+            font-family: 'Varela Round', sans-serif;
+            color: rgba(255, 255, 255, 0.70);
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>HELLO</h1>
+<div id="main-text">
+    Holy 💩 there are {{ data.total_infections }} 😷 and {{ data.total_deaths }}
+    ☠️️ in 🇺🇸
+</div>
+
+<footer>Made with ♥️ by BoBee</footer>
 </body>
 </html>

@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class CovidData(models.Model):
+    total_deaths = models.CharField(max_length=20)
+    total_infections = models.CharField(max_length=20)
+
+    def __str__(self):
+        return f'☠️ {self.total_deaths}'
