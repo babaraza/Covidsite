@@ -3,4 +3,8 @@
 [![Heroku 3.0](https://img.shields.io/badge/Heroku-blueviolet.svg)](https://www.djangoproject.com/)
 
 # Covid Site
-Website that pulls data from worldometers.info and updates every time a visitor goes to the website
+A simple website that pulls live data from `worldometers.info` for Total number of Cases and Deaths in USA
+
+
+
+Visit: http://thisiscrap.herokuapp.com/
