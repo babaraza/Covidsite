@@ -2,6 +2,7 @@ from django.views import generic
 from bs4 import BeautifulSoup
 from .models import CovidData
 import requests
+import re
 
 
 class IndexView(generic.ListView):
@@ -27,7 +28,7 @@ def myfunc():
     r = s.get('https://www.worldometers.info/coronavirus/country/us/', headers=headers)
     soup = BeautifulSoup(r.text, 'lxml')
 
-    div_updated = soup.find('div', text="Last updated")
+    div_updated = soup.find('div', text=re.compile("Last updated"))
     divs = soup.find_all('div', class_="maincounter-number")
 
     updated_ = div_updated.text
