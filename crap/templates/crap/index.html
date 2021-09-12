@@ -7,50 +7,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <style>
+        #mainText {
+            font-family: "Varela Round", sans-serif;
+        }
 
-        #main-text {
-            font-family: 'Varela Round', sans-serif;
-            font-size: 125px;
+        #mainText__intro,
+        #mainText__cases,
+        #mainText__deaths {
+            font-size: 50px;
             font-weight: bold;
             color: rgba(255, 255, 255, 0.75);
         }
 
-        @media only screen and (max-width: 480px) {
-            #main-text {
-                font-family: 'Varela Round', sans-serif;
-                font-size: 50px;
-                color: rgba(255, 255, 255, 0.80);
-            }
+        #mainText__updated {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 16px;
+        }
 
-            footer {
-                font-family: 'Varela Round', sans-serif;
-                color: rgba(255, 255, 255, 0.70);
-                position: absolute;
-                top: 45%;
-                width: 100%;
-            }
+        #mainText__cases,
+        #mainText__updated {
+            margin-top: 20px;
         }
 
         body {
-            background: rgb(96, 38, 193) linear-gradient(45deg, rgba(96, 38, 193, 1) 0%, rgba(54, 117, 241, 1) 100%) fixed;
+            background: rgb(96, 38, 193) linear-gradient(
+                    45deg,
+                    rgba(96, 38, 193, 1) 0%,
+                    rgba(54, 117, 241, 1) 100%
+            ) fixed;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         footer {
-            font-family: 'Varela Round', sans-serif;
-            color: rgba(255, 255, 255, 0.70);
-            position: absolute;
-            bottom: 30px;
+            font-family: "Varela Round", sans-serif;
+            color: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            bottom: 20px;
+            left: 30px;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
 <div id="main-text">
-    Holy 💩 there are {{ data.total_infections }} 😷 and {{ data.total_deaths }}
-    ☠️️ in 🇺🇸
+    There are 😷 and ☠️️ in USA
 </div>
 
-<footer>Made with ♥️ by BoBee</footer>
+<div id="mainText">
+    <div id="mainText__intro">Covid Stats USA</div>
+    <div id="mainText__cases">😷 {{ data.total_infections }}</div>
+    <div id="mainText__deaths">☠️️ {{ data.total_deaths }}</div>
+    <div id="mainText__updated">{{ data.last_udpated }}</div>
+</div>
+
+<footer>Made with ♥️ by B</footer>
 </body>
 </html>
