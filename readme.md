@@ -7,4 +7,4 @@ A simple website that pulls live data from `worldometers.info` for Total number 
 
 
 
-Visit: http://thisiscrap.herokuapp.com/
+Visit: http://thisiscovid.herokuapp.com/
